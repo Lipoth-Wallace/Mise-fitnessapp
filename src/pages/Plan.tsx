@@ -103,9 +103,16 @@ function Decks({ planning }: { planning: Planning }) {
   const [info, setInfo] = useState<Scored | null>(null)
   const [trialMode, setTrialMode] = useState(false)
   const [reviewing, setReviewing] = useState(false)
+  // Skipped cards go to the back of their own deck for this session; nothing is recorded.
+  const [skipped, setSkipped] = useState<Record<string, string[]>>({})
   const extra = trialMode && planning.trial ? [planning.trial.diet] : []
   const allPicked = Object.values(planning.selected).flat()
-  const queue = useMemo(() => deckQueue(cat, profile, t, b, allPicked, planning.filters, extra), [cat, profile, t, b, allPicked.join(), planning.filters, extra.join()]) // eslint-disable-line react-hooks/exhaustive-deps
+  const baseQueue = useMemo(() => deckQueue(cat, profile, t, b, allPicked, planning.filters, extra), [cat, profile, t, b, allPicked.join(), planning.filters, extra.join()]) // eslint-disable-line react-hooks/exhaustive-deps
+  const skippedHere = skipped[cat] ?? NONE
+  const queue = useMemo(() => [
+    ...baseQueue.filter((s) => !skippedHere.includes(s.adapted.recipe.id)),
+    ...skippedHere.map((id) => baseQueue.find((s) => s.adapted.recipe.id === id)).filter((s): s is Scored => !!s),
+  ], [baseQueue, skippedHere])
   const picked = planning.selected[cat]
   const target = planning.counts[cat]
   const full = picked.length >= target
@@ -162,8 +169,12 @@ function Decks({ planning }: { planning: Planning }) {
           action={<div className="flex flex-wrap gap-2"><Button size="sm" variant="soft" onClick={resetRejected}><RotateCcw size={14} /> Show passed recipes again</Button>{nextCat && <Button size="sm" onClick={() => setCat(nextCat)}>Next deck</Button>}</div>} />
       ) : (
         <>
-          <SwipeDeck queue={queue} hideNumbers={hide} onInfo={setInfo} onSwipe={(id, dir) => swipe(cat, id, dir, trialMode)} />
-          <p className="mt-3 text-center text-[13px] text-muted">{queue.length} recipe{queue.length === 1 ? '' : 's'} left in this deck{picked.length > 0 && ' · '}{picked.length > 0 && <button className="font-semibold text-primary" onClick={() => setReviewing(true)}>See picks</button>}</p>
+          <SwipeDeck queue={queue} hideNumbers={hide} onInfo={setInfo} onSwipe={(id, dir) => {
+            if (dir === 'up') setSkipped((sk) => ({ ...sk, [cat]: [...(sk[cat] ?? []).filter((x) => x !== id), id] }))
+            else swipe(cat, id, dir, trialMode)
+          }} />
+          <p className="mt-2 text-center text-[12px] text-muted">Swipe right to add · left to pass · up to skip for now</p>
+          <p className="mt-1 text-center text-[13px] text-muted">{queue.length} recipe{queue.length === 1 ? '' : 's'} left in this deck{picked.length > 0 && ' · '}{picked.length > 0 && <button className="font-semibold text-primary" onClick={() => setReviewing(true)}>See picks</button>}</p>
         </>
       )}
 
@@ -183,6 +194,8 @@ function Decks({ planning }: { planning: Planning }) {
 }
 
 /** Spread picks across Monday–Sunday. Trial-diet picks go on the first N days. Repeats fill remaining days. */
+const NONE: string[] = []
+
 export function buildPlan(planning: Planning): MealPlan {
   const meals: PlannedMeal[] = []
   for (const c of CATEGORIES) {

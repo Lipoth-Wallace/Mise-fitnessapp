@@ -1,11 +1,12 @@
 import ingredientsJson from '../data/ingredients.json'
-import { RECIPES } from '../data/recipes'
+import { RECIPES as BASE } from '../data/recipes'
+import { MORE_RECIPES } from '../data/more'
 import type { Ingredient, Macros, RecipeSeed } from '../types'
 
 export const INGREDIENTS = ingredientsJson as Ingredient[]
+export const RECIPES = [...BASE, ...MORE_RECIPES]
 export const ING = new Map(INGREDIENTS.map((i) => [i.id, i]))
 export const RECIPE = new Map(RECIPES.map((r) => [r.id, r]))
-export { RECIPES }
 
 export function ing(id: string): Ingredient {
   const i = ING.get(id)

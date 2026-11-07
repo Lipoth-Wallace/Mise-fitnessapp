@@ -157,4 +157,84 @@ asparagus|Asparagus|Asparagus, raw|20|g||produce|||10|asparagus
 cornflour|Cornflour|Cornstarch|381|g||dry|||2.5|cornflour,cornstarch
 naan|Plain naan|Bread, naan, plain, refrigerated|291|each|90|bakery|gluten,grain,milk|eggs,sesame|4|naan,naan bread
 ice-cream|Vanilla ice cream|Ice creams, vanilla|207|g||frozen|milk,sugar|eggs|3|vanilla ice cream,ice cream
+chorizo|Chorizo|Sausage, pork, chorizo, link or ground, raw|455|g||meat|meat,pork|milk,soya|14|chorizo,cooking chorizo
+ham|Cooked ham|Ham, sliced, regular (approximately 11% fat)|163|g||meat|meat,pork||10|ham,cooked ham,honey roast ham,wafer thin ham
+pork-mince|Lean pork mince|Pork, ground, 96% lean / 4% fat, raw|121|g||meat|meat,pork||7|pork mince,lean pork mince
+chicken-mince|Chicken mince|Chicken, ground, raw|143|g||meat|meat,poultry||8|chicken mince
+chicken-drumstick|Chicken drumsticks|Chicken, drumstick, meat and skin, raw|161|g||meat|meat,poultry||4|drumsticks,chicken drumsticks,chicken legs
+flank-steak|Flank steak|Beef, flank, steak, raw|155|g||meat|meat||16|flank steak,bavette
+lamb-leg|Lamb leg steak|Lamb, leg, shank half, raw|125|g||meat|meat||16|lamb leg,lamb leg steaks
+mackerel|Mackerel fillet|Fish, mackerel, Atlantic, raw|205|g||fish|fish,seafood||11|mackerel,mackerel fillets,smoked mackerel
+smoked-salmon|Smoked salmon|Fish, salmon, chinook, smoked|117|g||fish|fish,seafood||28|smoked salmon,scottish smoked salmon
+sardines|Sardines in tomato sauce|Fish, sardine, Pacific, canned in tomato sauce, drained solids with bone|185|g||dry|fish,seafood||8|sardines,sardines in tomato
+haddock|Haddock fillet|Fish, haddock, raw|74|g||fish|fish,seafood||16|haddock,haddock fillets
+mussels|Mussels|Mollusks, mussel, blue, raw|86|g||fish|molluscs,seafood||6|mussels,rope grown mussels
+squid|Squid|Mollusks, squid, mixed species, raw|92|g||fish|molluscs,seafood||12|squid,calamari
+anchovies|Anchovies in oil|Fish, anchovy, european, canned in oil, drained solids|210|g||dry|fish,seafood||30|anchovies,anchovy fillets
+silken-tofu|Silken tofu|MORI-NU, Tofu, silken, firm|62|g||dairy|soya||6|silken tofu
+greek-yogurt-full|Full-fat Greek yogurt|Yogurt, Greek, plain, whole milk|97|g||dairy|milk||4.5|greek yogurt,full fat greek
+kefir|Kefir|Kefir, lowfat, plain, LIFEWAY|43|ml||dairy|milk||3|kefir
+sour-cream|Soured cream|Cream, sour, cultured|198|g||dairy|milk||5|soured cream,sour cream,creme fraiche
+goat-cheese|Soft goat's cheese|Cheese, goat, soft type|264|g||dairy|milk||14|goats cheese,goat cheese,chevre
+gruyere|Gruyère|Cheese, gruyere|413|g||dairy|milk||20|gruyere,comte,emmental
+blue-cheese|Blue cheese|Cheese, blue|353|g||dairy|milk||14|blue cheese,stilton,gorgonzola
+condensed-milk|Condensed milk|Milk, canned, condensed, sweetened|321|g||dry|milk,sugar||4|condensed milk
+pine-nuts|Pine nuts|Nuts, pine nuts, dried|673|g||dry|nuts||40|pine nuts
+hazelnuts|Hazelnuts|Nuts, hazelnuts or filberts|628|g||dry|nuts||14|hazelnuts
+almond-butter|Almond butter|Nuts, almond butter, plain, without salt added|614|g||sauces|nuts||16|almond butter
+sesame-seeds|Sesame seeds|Seeds, sesame seeds, whole, dried|573|g||dry|sesame||10|sesame seeds
+sunflower-seeds|Sunflower seeds|Seeds, sunflower seed kernels, dried|584|g||dry|||7|sunflower seeds
+flaxseed|Milled flaxseed|Seeds, flaxseed|534|g||dry|||8|flaxseed,linseed,milled flaxseed
+coconut|Desiccated coconut|Nuts, coconut meat, dried (desiccated), not sweetened|660|g||dry|||8|desiccated coconut,coconut flakes
+dried-apricots|Dried apricots|Apricots, dried, sulfured, uncooked|241|g||dry|sulphites||8|dried apricots,apricots
+dried-cranberries|Dried cranberries|Cranberries, dried, sweetened|308|g||dry|sugar||9|dried cranberries,cranberries
+pear|Pears|Pears, raw|57|each|178|produce|||2.2|pears,conference pears
+grapes|Grapes|Grapes, red or green (European type, such as Thompson seedless), raw|69|g||produce|||4|grapes,red grapes,green grapes
+kiwi|Kiwi fruit|Kiwifruit, green, raw|61|each|69|produce|||4|kiwi,kiwi fruit
+watermelon|Watermelon|Watermelon, raw|30|g||produce|||1.2|watermelon
+pomegranate|Pomegranate seeds|Pomegranates, raw|83|g||produce|||12|pomegranate,pomegranate seeds
+cherries|Cherries|Cherries, sweet, raw|63|g||produce|||9|cherries
+peach|Peaches|Peaches, yellow, raw|39|each|150|produce|||4|peaches,nectarines
+plum|Plums|Plums, raw|46|each|66|produce|||4|plums
+leek|Leeks|Leeks, (bulb and lower leaf-portion), raw|61|g||produce|||3|leeks,leek
+beetroot|Cooked beetroot|Beets, raw|43|g||produce|||2.5|beetroot,cooked beetroot
+brussels|Brussels sprouts|Brussels sprouts, raw|43|g||produce|||3|brussels sprouts,sprouts
+pak-choi|Pak choi|Cabbage, chinese (pak-choi), raw|13|g||produce|||6|pak choi,bok choy
+bean-sprouts|Bean sprouts|Mung beans, mature seeds, sprouted, raw|30|g||produce|||4|bean sprouts,beansprouts
+rocket|Rocket|Arugula, raw|25|g||produce|||12|rocket,wild rocket,arugula
+radish|Radishes|Radishes, raw|16|g||produce|||4|radishes,radish
+fennel|Fennel|Fennel, bulb, raw|31|g||produce|||5|fennel
+parsnip|Parsnips|Parsnips, raw|75|g||produce|||1.5|parsnips,parsnip
+pumpkin|Pumpkin|Pumpkin, raw|26|g||produce|||1.5|pumpkin
+iceberg|Iceberg lettuce|Lettuce, iceberg, raw|14|g||produce|||2|iceberg,iceberg lettuce
+frozen-spinach|Frozen spinach|Spinach, frozen, chopped or leaf, unprepared|29|g||frozen|||2.5|frozen spinach
+lemon-zest|Lemon zest|Lemon peel, raw|47|g||produce|||3|lemon zest
+butter-beans|Butter beans (tinned)|Lima beans, large, mature seeds, canned|79|g||dry|legume||2.5|butter beans
+cannellini|Cannellini beans (tinned)|Beans, white, mature seeds, canned|114|g||dry|legume||2.5|cannellini,cannellini beans,white beans,haricot beans
+pearl-barley|Pearl barley|Barley, pearled, raw|352|g||dry|gluten,grain||2|pearl barley,barley
+bulgur|Bulgur wheat|Bulgur, dry|342|g||dry|gluten,grain||3|bulgur,bulgur wheat
+polenta|Polenta|Cornmeal, degermed, yellow|370|g||dry|grain||3|polenta,cornmeal
+buckwheat|Buckwheat|Buckwheat groats, roasted, dry|346|g||dry|grain|gluten|5|buckwheat
+gram-flour|Gram flour|Chickpea flour (besan)|387|g||dry|legume||3|gram flour,chickpea flour,besan
+rye-bread|Rye bread|Bread, rye|259|each|32|bakery|gluten,grain|sesame|4|rye bread,pumpernickel
+english-muffin|English muffin|English muffins, plain, without calcium propionate|235|each|57|bakery|gluten,grain|soya,milk|3.5|english muffins,muffins
+bagel|Plain bagel|Bagels, plain, without calcium propionate|275|each|85|bakery|gluten,grain|sesame|4|bagels,plain bagels
+soba|Soba noodles (dry)|Noodles, japanese, soba, dry|336|g||dry|gluten,grain||8|soba,soba noodles
+digestives|Digestive biscuits|Cookies, graham crackers, plain or honey|430|g||dry|gluten,grain,sugar|milk,soya|2.5|digestives,digestive biscuits
+popcorn|Popcorn kernels|Snacks, popcorn, air-popped|387|g||dry|grain||5|popcorn,popping corn
+jam|Jam|Jams and preserves|278|g||sauces|sugar||3|jam,strawberry jam,raspberry jam
+coffee|Instant coffee|Beverages, coffee, instant, powder|353|g||dry|||25|instant coffee,coffee
+red-wine-vinegar|Red wine vinegar|Vinegar, red wine|19|ml||sauces|sulphites||4|red wine vinegar,vinegar
+worcestershire|Worcestershire sauce|Sauce, worcestershire|77|ml||sauces|fish,gluten|sulphites|5|worcestershire,worcestershire sauce
+hoisin|Hoisin sauce|Sauce, hoisin, ready-to-serve|220|g||sauces|soya,gluten,sugar|sesame|6|hoisin,hoisin sauce
+sriracha|Sriracha|Sauce, hot chile, sriracha|93|g||sauces|||8|sriracha,hot sauce
+passata|Passata|Tomato products, canned, sauce|24|g||dry|||1.5|passata,sieved tomatoes
+capers|Capers|Capers, canned|23|g||sauces|||15|capers
+chicken-stock|Chicken stock|Soup, chicken broth, ready-to-serve|6|ml||sauces|meat,poultry|celery|1.5|chicken stock,chicken stock cubes,chicken stock pot
+thyme|Dried thyme|Spices, thyme, dried|276|g||dry|||25|thyme,dried thyme
+rosemary|Dried rosemary|Spices, rosemary, dried|331|g||dry|||25|rosemary
+dill|Fresh dill|Dill weed, fresh|43|g||produce|||25|dill
+chives|Fresh chives|Chives, raw|30|g||produce|||25|chives
+ground-ginger|Ground ginger|Spices, ginger, ground|335|g||dry|||20|ground ginger
+nutmeg|Ground nutmeg|Spices, nutmeg, ground|525|g||dry|||30|nutmeg
 `

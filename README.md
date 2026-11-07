@@ -16,7 +16,7 @@ GitHub Pages on a **private** repo needs a paid GitHub plan. On a free plan, mak
 ```bash
 npm install
 npm run dev        # http://localhost:5173
-npm test           # 55 unit tests: calorie maths, allergy safety, shopping, receipts
+npm test           # 438 tests: calorie maths, allergy safety, shopping, receipts, recipe quality
 npm run build      # production build in dist/
 ```
 
@@ -36,8 +36,8 @@ npm run build      # production build in dist/
 Modules: `lib/nutrition` (targets), `lib/safety` (allergy/diet gate and substitutions), `lib/recommend` (decks, scoring, Smart Adjustments), `lib/shopping` (consolidation, leftovers, pantry), `lib/receipt` (parsing, matching, reconciliation), `lib/ocr`, `lib/foods` (USDA search, barcode lookup).
 
 ### Data sources
-- **Nutrition:** USDA FoodData Central SR Legacy (public domain), via the TempoLife dataset (CC-BY-4.0). `scripts/build-data.mjs` joins 145 catalogue ingredients to exact USDA entries and fails the build if any is missing, so no value is invented. Carbs are converted to the UK basis (excluding fibre).
-- **Recipes:** 50 original recipes (10 per deck). Nutrition is calculated from gram quantities and always labelled "calculated estimate".
+- **Nutrition:** USDA FoodData Central SR Legacy (public domain), via the TempoLife dataset (CC-BY-4.0). `scripts/build-data.mjs` joins 225 catalogue ingredients to exact USDA entries and fails the build if any is missing, so no value is invented. Carbs are converted to the UK basis (excluding fibre).
+- **Recipes:** 382 original recipes (74–81 per deck) across 16 cuisines. Nutrition is calculated from gram quantities and always labelled "calculated estimate". Every recipe must pass `src/lib/__tests__/recipes.test.ts` (known ingredients, every ingredient used in the method, plausible quantities and kcal per serving for its meal type) and the allergy suite.
 - **Barcodes:** Open Food Facts (ODbL). Missing products fall back to manual entry; missing nutrients are flagged, never guessed.
 
 ## Status
@@ -50,6 +50,7 @@ Modules: `lib/nutrition` (targets), `lib/safety` (allergy/diet gate and substitu
 - Dashboard: calorie doughnut, macro distribution chart, sugar tracked separately, water, manual steps/activity, weight trend, planned meals, Smart Adjustments, 7-day summary, workout summary, non-judgemental daily check-ins
 - Food diary: USDA search (7,233 foods, offline), barcode scanning, recipes, manual entry, edit/delete; planned meals logged once only
 - Five independent swipe decks with per-deck counters, drag or button controls, keyboard arrows, green/red swipe borders, favourites (heart), rejections remembered, preloaded cards
+- Skip: swipe up, tap Skip or press ↑ to send a card to the back of the deck without liking or rejecting it
 - Strict allergy and diet filtering with verified substitutions shown in a labelled "Adapted for you" panel; method text and shopping list update too
 - Trial diets for a chosen number of days, time/difficulty/budget filters, preference learning from swipes, favourites, ratings and variety
 - Weekly calendar (Mon–Sun × 5 slots): add, move, replace, remove, repeat, servings, leftovers, custom meals, daily totals, multiple weeks
@@ -66,7 +67,7 @@ Modules: `lib/nutrition` (targets), `lib/safety` (allergy/diet gate and substitu
 - **No background push.** Static hosting has no server to send Web Push, so reminders appear when you open the app.
 - **No Apple Health.** Websites can't read HealthKit; steps are entered by hand.
 - **Recipe photos.** Cards use generated plate illustrations. Real photography needs a licensed source.
-- **Recipe library size.** 50 recipes. Strict diets (e.g. vegan + gluten-free) leave small decks. Scaling up needs a licensed recipe API, with every recipe re-validated by the safety module.
+- **Recipe library coverage.** 382 recipes. Vegan + gluten-free leaves 11–29 per deck, and keto only 3–6 per main-meal deck. Keto and vegan recipes are the next priority.
 - **Costs** are rough UK estimates until receipts provide real prices.
 - **OCR** suits clear, flat receipts. The review screen is the safeguard: nothing changes until you confirm.
 
