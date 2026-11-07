@@ -1,0 +1,8 @@
+node_modules
+dist
+*.local
+.DS_Store
+# generated at build time
+public/ocr/
+public/data/
+src/data/ingredients.json

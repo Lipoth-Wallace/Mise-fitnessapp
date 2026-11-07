@@ -1,0 +1,64 @@
+@import "tailwindcss";
+@import "@fontsource-variable/bricolage-grotesque";
+@import "@fontsource-variable/figtree";
+
+/* Themes. Functions are identical across themes; only tokens change.
+   Rose  — #FFC5D3 #9C51B6 #FFFFFF #D1B765 + complementary #2E1838 (deep plum ink) and #FFF4F7 (blush wash)
+   Noir  — #D1B765 #FFFFFF #000000 #980002 #0000FF
+   Sage  — neutral theme for anyone who prefers it */
+:root, [data-theme="rose"] {
+  --bg: #FFFFFF; --surface: #FFF4F7; --surface-2: #FFC5D3; --ink: #2E1838; --muted: #6E5A78; --line: #F1D9E3;
+  --primary: #9C51B6; --on-primary: #FFFFFF; --accent: #D1B765; --on-accent: #2E1838; --accent-ink: #7A5A12;
+  --heart: #E8457E; --good: #1F7A4D; --warn: #A6620B; --bad: #B3261E; --info: #9C51B6; --on-info: #FFFFFF;
+  --ring-track: #F7E3EB; --shadow: 0 1px 0 rgba(46,24,56,.04), 0 8px 24px -12px rgba(156,81,182,.28);
+  --carb: #D1B765; --protein: #9C51B6; --fat: #FF9CB6;
+  color-scheme: light;
+}
+[data-theme="noir"] {
+  --bg: #000000; --surface: #121212; --surface-2: #1E1A10; --ink: #FFFFFF; --muted: #B8B8B8; --line: #2A2614;
+  --primary: #D1B765; --on-primary: #000000; --accent: #0000FF; --on-accent: #FFFFFF; --accent-ink: #D1B765;
+  --heart: #980002; --good: #4CC38A; --warn: #E8A33D; --bad: #FF6B6B; --info: #0000FF; --on-info: #FFFFFF;
+  --ring-track: #1C1C1C; --shadow: 0 0 0 1px #2A2614;
+  --carb: #D1B765; --protein: #FFFFFF; --fat: #980002;
+  color-scheme: dark;
+}
+[data-theme="sage"] {
+  --bg: #F6F7F2; --surface: #FFFFFF; --surface-2: #E3EADB; --ink: #1F2A22; --muted: #5B6B5F; --line: #DCE3D5;
+  --primary: #2F6B4F; --on-primary: #FFFFFF; --accent: #E2B04A; --on-accent: #1F2A22; --accent-ink: #7A5A12;
+  --heart: #C2364A; --good: #2F6B4F; --warn: #A6620B; --bad: #B3261E; --info: #2F6B4F; --on-info: #FFFFFF;
+  --ring-track: #E8ECE3; --shadow: 0 1px 0 rgba(0,0,0,.03), 0 8px 24px -14px rgba(31,42,34,.25);
+  --carb: #E2B04A; --protein: #2F6B4F; --fat: #C98A6B;
+  color-scheme: light;
+}
+
+@theme inline {
+  --color-bg: var(--bg); --color-surface: var(--surface); --color-surface-2: var(--surface-2); --color-ink: var(--ink);
+  --color-muted: var(--muted); --color-line: var(--line); --color-primary: var(--primary); --color-on-primary: var(--on-primary);
+  --color-accent: var(--accent); --color-on-accent: var(--on-accent); --color-accent-ink: var(--accent-ink); --color-heart: var(--heart);
+  --color-good: var(--good); --color-warn: var(--warn); --color-bad: var(--bad); --color-info: var(--info); --color-on-info: var(--on-info);
+  --font-display: "Bricolage Grotesque Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Figtree Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+html, body, #root { height: 100%; }
+body {
+  background: var(--bg); color: var(--ink); font-family: var(--font-sans); font-size: 16px; line-height: 1.5;
+  -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: transparent; overscroll-behavior-y: none;
+}
+h1, h2, h3, .display { font-family: var(--font-display); letter-spacing: -0.02em; line-height: 1.1; }
+h1 { font-size: 2rem; font-weight: 700; font-variation-settings: "wdth" 85; }
+h2 { font-size: 1.375rem; font-weight: 650; }
+h3 { font-size: 1.0625rem; font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; }
+:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; border-radius: 10px; }
+.card { background: var(--surface); border-radius: 22px; box-shadow: var(--shadow); }
+.safe-top { padding-top: max(env(safe-area-inset-top), 12px); }
+.safe-bottom { padding-bottom: max(env(safe-area-inset-bottom), 8px); }
+input, select, textarea { font-size: 16px; } /* stops iOS zoom on focus */
+.field { width: 100%; background: var(--bg); border: 1.5px solid var(--line); border-radius: 14px; padding: 12px 14px; color: var(--ink); }
+.field:focus { border-color: var(--primary); outline: none; }
+.strike { text-decoration: line-through; text-decoration-thickness: 2px; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+.no-scrollbar::-webkit-scrollbar { display: none; } .no-scrollbar { scrollbar-width: none; }
+
+.tag { display: inline-flex; align-items: center; gap: 4px; border-radius: 999px; background: var(--surface-2); color: var(--ink); padding: 3px 10px; font-weight: 600; }
